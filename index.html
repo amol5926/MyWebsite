@@ -6,30 +6,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Exo+2&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
     <div class="navbar">
-        <a href="#">Link1</a>
-        <a href="#">Link2</a>
-        <a href="#">Link3</a>
-        <a href="#">Link4</a>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <div class="dropdown">
+            <button class="dropbtn">Portfolio
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="index copy.html">Flow</a>
+                <br>
+                <br>
+                <a href="#">OYU</a>
+                <br>
+                <br>
+                <a href="#">Cyberlight</a>
+            </div>
+        </div>
+        <a href="#">Photography</a>
     </div>
 
-    <div class="header">
-        <h1>My Website</h1>
-        <p>A website created by me.</p>
+    <a href="http://www.example.com" target="_blank" class="pictogram-link">
+        <img src="instagram.png" alt="Pictogram" class="pictogram">
+    </a>
+    <img src="Logo5.png" alt="logo" class="logo">
+    <div class="slideshow-container">
+        <div class="header">
+            <h1>My portfolio</h1>
+            <p>A website created by me.</p>
+        </div>
+        <div class="mySlides fade">
+            <img src="WIREFRAME_OVERGANG.png">
+        </div>
+        <div class="mySlides fade">
+            <img src="CONTEXTRENDER.png">
+        </div>
+        <div class="mySlides fade">
+            <img src="DETAILRENDER.png">
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
-
-
-
+    <div class="dot-container">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+    <script src="script.js"></script>
     <div class="row">
         <div class="side">
             <h2>About Me</h2>
             <h5>Photo of me:</h5>
-            <div class="fakeimg" style="height:200px;">Image</div>
+            <img src="foto.png" alt="profielfoto" class="pfp">
             <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
             <h3>More Text</h3>
             <p>Lorem ipsum dolor sit ame.</p>
