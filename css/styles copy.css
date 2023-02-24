@@ -14,10 +14,21 @@ body {
 
 }
 
+.dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  margin: 0;
+  z-index: 10;
+}
+
 /* Style the top navigation bar */
 /* Style the top navigation bar */
 .navbar {
-  overflow: hidden;
+  overflow: visible;
   background-color: #333;
   position: fixed;
   /* Add this line */
@@ -185,9 +196,9 @@ body {
 }
 
 .teaser {
-  width: 98vw;
+  width: 75vw;
   /* Set the width to the full viewport width */
-  height: 100vh;
+  height: 80vh;
   /* Set the height to the full viewport height */
   object-fit: cover;
   /* Scale the image to cover the entire element */
@@ -203,4 +214,47 @@ body {
   height: 200px;
   z-index: 1;
   margin: auto;
+}
+
+/* Style the dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 45px;
+  z-index: 20;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+/* Style the links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 5px 0px;
+  width: 160px;
+  text-decoration: none;
+  display: block;
+  border-radius: 5px;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #f1f1f1
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #ddd;
+  color: black;
+}
+
+.spread1 {
+  overflow: hidden;
+  align-content: center;
 }

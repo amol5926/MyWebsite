@@ -1,43 +1,31 @@
-const slides = document.querySelectorAll('.slideshow-container img');
-const dots = document.querySelectorAll('.dot');
-let slideIndex = 0;
 document.body.style.zoom = "125%"
+// Get the dropdown element
+var dropdown = document.querySelector('.dropdown');
 
-showSlides();
+// Get the nav element
+var nav = document.querySelector('.nav');
 
-setInterval(() => {
-    showSlides();
-}, 8000);
+// Add a mouseover event listener to the nav element
+nav.addEventListener('mouseover', function () {
+    // Show the dropdown
+    dropdown.classList.add('show');
+});
 
-function showSlides() {
-    if (slideIndex >= slides.length) {
-        slideIndex = 0;
-    }
-    if (slideIndex < 0) {
-        slideIndex = slides.length - 1;
-    }
+// Add a mouseleave event listener to the nav element
+nav.addEventListener('mouseleave', function () {
+    // Hide the dropdown
+    dropdown.classList.remove('show');
+});
 
-    // Hide all slides and remove the active class from all dots
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.opacity = 0;
-        dots[i].classList.remove('active');
-    }
+// Add a mouseover event listener to the dropdown element
+dropdown.addEventListener('mouseover', function () {
+    // Show the dropdown
+    dropdown.classList.add('show');
+});
 
-    // Show the current slide and add the active class to the corresponding dot
-    slides[slideIndex].style.opacity = 1;
-    dots[slideIndex].classList.add('active');
-
-    // Change the color of the header text
-    const header = document.querySelector('.header');
-    if (slideIndex === 0) {
-        header.style.color = 'white';
-    } else if (slideIndex === 1) {
-        header.style.color = 'gray';
-    } else {
-        header.style.color = 'gray';
-    }
-
-    // Increment the slide index
-    slideIndex++;
-}
+// Add a mouseleave event listener to the dropdown element
+dropdown.addEventListener('mouseleave', function () {
+    // Hide the dropdown
+    dropdown.classList.remove('show');
+});
 
