@@ -1,4 +1,7 @@
 # MyWebsiteTemplate
-A HTML/CSS template for the course Emerging Technologies based on the https://www.w3schools.com/howto/howto_make_a_website.asp template.
 
-https://amol5926.github.io/MyWebsite/
+https://amol5926.github.io/MyWebsite/   (versie 1)
+
+Het is uiteindelijk toch gelukt om de nieuwe versie te uploaden door alle bestanden één voor één via de browser te uploaden. Ik heb hiervoor een nieuwe repo aangemaakt.
+
+https://amol5926.github.io/test/    (versie 2)
