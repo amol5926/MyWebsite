@@ -26,7 +26,6 @@ window.addEventListener('scroll', function () {
 //knop om terug naar boven te gaan (kan waarschijnlijk zonder js, nog bekijken)
 let mybutton = document.getElementById("btn-back-to-top");
 
-//knop pas zichtbaar als 20px naar beneden gescrold wordt
 window.onscroll = function () {
     scrollFunction();
 };
