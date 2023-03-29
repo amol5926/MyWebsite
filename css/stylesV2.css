@@ -73,8 +73,12 @@
     bottom: 20px;
     right: 20px;
     display: none;
-    background-color: rgb(205, 205, 205);
-    opacity: 30%;
+    background-color: #d3d3d3;
+    opacity: 70%;
+}
+
+.fas {
+    color: #ffffff;
 }
 
 .navbar {
@@ -89,7 +93,6 @@
 .navbar-nav a {
     font-size: 1.3em;
 }
-
 
 
 /* moet nog aan gewerkt worden:Dark mode styles */
@@ -263,6 +266,7 @@ a:hover {
 
 .portfolio .portfolio-item {
     margin-bottom: 30px;
+
 }
 
 .portfolio #portfolio-flters {
@@ -303,6 +307,7 @@ a:hover {
     overflow: hidden;
     z-index: 1;
     background: rgba(21, 21, 21, 0.6);
+    border-radius: 2%;
 }
 
 .portfolio .portfolio-wrap::before {
@@ -316,10 +321,12 @@ a:hover {
     transition: all ease-in-out 0.3s;
     z-index: 2;
     opacity: 0;
+    border-radius: 2%;
 }
 
 .portfolio .portfolio-wrap img {
     transition: all ease-in-out 0.3s;
+
 }
 
 .portfolio .portfolio-wrap .portfolio-info {
@@ -380,4 +387,144 @@ a:hover {
 
 .portfolio .portfolio-wrap:hover .portfolio-info {
     opacity: 1;
+}
+
+
+
+html::-webkit-scrollbar {
+    width: 16px;
+    height: 16px;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #ababab;
+    border-radius: 16px;
+}
+
+html::-webkit-scrollbar-track {
+    background: black;
+}
+
+
+
+.popup {
+    background-color: #ffffff;
+    width: 80%;
+    padding: 30px 40px;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 20px;
+    font-family: "Poppins", sans-serif;
+    display: none;
+    text-align: center;
+    z-index: 99;
+}
+
+.popup button {
+    display: block;
+    margin: 0 0 20px auto;
+    background-color: transparent;
+    font-size: 30px;
+    color: #ffffff;
+    background: #03549a;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.popup h2 {
+    margin-top: -20px;
+}
+
+.popup p {
+    font-size: 14px;
+    text-align: justify;
+    margin: 20px 0;
+    line-height: 25px;
+}
+
+.section-title h2 {
+    margin: 2rem 0;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.toggle-control {
+    display: block;
+    position: relative;
+    padding-left: 100px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 22px;
+    user-select: none;
+}
+
+.toggle-control input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.toggle-control input:checked~.control {
+    background-color: #0d6efd;
+}
+
+.toggle-control input:checked~.control:after {
+    left: 25px;
+}
+
+.toggle-control .control {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 50px;
+    border-radius: 12.5px;
+    background-color: darkgray;
+    transition: background-color 0.15s ease-in;
+}
+
+.toggle-control .control:after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 12.5px;
+    background: white;
+    transition: left 0.15s ease-in;
+}
+
+body {
+    transition: background-color 0.5s ease;
+}
+
+/*dark theme stuff*/
+
+[data-theme="dark"] body {
+    background-color: #110f16;
+}
+
+[data-theme="dark"] .portfolio #portfolio-flters li {
+    color: #cecece;
+}
+
+[data-theme="dark"] .section-title h2 {
+    color: #f3f5f7;
+}
+
+[data-theme="dark"] #btn-back-to-top {
+    background-color: #0d6efd;
+    opacity: 100%;
+}
+
+[data-theme="dark"] .fas {
+    color: #dadada;
 }

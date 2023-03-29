@@ -73,39 +73,111 @@ new Swiper('.myDesign-slider', {
     }
 });
 
-/**
- * Porfolio isotope and filter
- */
-window.addEventListener('load', () => {
-    let portfolioContainer = select('.portfolio-container');
-    if (portfolioContainer) {
-        let portfolioIsotope = new Isotope(portfolioContainer, {
-            itemSelector: '.portfolio-item'
-        });
 
-        let portfolioFilters = select('#portfolio-flters li', true);
+(function () {
+    "use strict";
 
-        on('click', '#portfolio-flters li', function (e) {
-            e.preventDefault();
-            portfolioFilters.forEach(function (el) {
-                el.classList.remove('filter-active');
-            });
-            this.classList.add('filter-active');
-
-            portfolioIsotope.arrange({
-                filter: this.getAttribute('data-filter')
-            });
-            portfolioIsotope.on('arrangeComplete', function () {
-                AOS.refresh()
-            });
-        }, true);
+    /**
+     * Easy selector helper function
+     */
+    const select = (el, all = false) => {
+        el = el.trim()
+        if (all) {
+            return [...document.querySelectorAll(el)]
+        } else {
+            return document.querySelector(el)
+        }
     }
 
-});
+    /**
+     * Easy event listener function
+     */
+    const on = (type, el, listener, all = false) => {
+        let selectEl = select(el, all)
+        if (selectEl) {
+            if (all) {
+                selectEl.forEach(e => e.addEventListener(type, listener))
+            } else {
+                selectEl.addEventListener(type, listener)
+            }
+        }
+    }
 
-/**
- * Initiate portfolio lightbox 
- */
-const portfolioLightbox = GLightbox({
-    selector: '.portfolio-lightbox'
-});
+
+
+    /**
+     * Porfolio isotope and filter
+     */
+    window.addEventListener('load', () => {
+        let portfolioContainer = select('.portfolio-container');
+        if (portfolioContainer) {
+            let portfolioIsotope = new Isotope(portfolioContainer, {
+                itemSelector: '.portfolio-item'
+            });
+
+            let portfolioFilters = select('#portfolio-flters li', true);
+
+            on('click', '#portfolio-flters li', function (e) {
+                e.preventDefault();
+                portfolioFilters.forEach(function (el) {
+                    el.classList.remove('filter-active');
+                });
+                this.classList.add('filter-active');
+
+                portfolioIsotope.arrange({
+                    filter: this.getAttribute('data-filter')
+                });
+                portfolioIsotope.on('arrangeComplete', function () {
+                    AOS.refresh()
+                });
+            }, true);
+        }
+
+    });
+
+
+
+
+})()
+
+//window.addEventListener("load", function () {
+//  setTimeout(
+//    function open(event) {
+//      document.querySelector(".popup").style.display = "block";
+//    },
+//2000
+//  )
+//});
+
+
+//document.querySelector("#close").addEventListener("click", function () {
+//  document.querySelector(".popup").style.display = "none";
+//});
+
+
+
+
+const toggleSwitch = document.querySelector('#dark-mode-toggle');
+
+function switchTheme(e) {
+    if (e.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark'); // save the user's preference to localStorage
+    } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light'); // save the user's preference to localStorage
+    }
+}
+
+// add a listener to the toggle switch
+toggleSwitch.addEventListener('change', switchTheme, false);
+
+// check the user's preference from localStorage and set the initial theme accordingly
+const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+if (currentTheme) {
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    if (currentTheme === 'dark') {
+        toggleSwitch.checked = true;
+    }
+}
+
