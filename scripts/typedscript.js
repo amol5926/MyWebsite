@@ -139,7 +139,7 @@ new Swiper('.myDesign-slider', {
 
 
 })()
-
+//popup nog verwijderen
 //window.addEventListener("load", function () {
 //  setTimeout(
 //    function open(event) {
