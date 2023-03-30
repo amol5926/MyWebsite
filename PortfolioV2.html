@@ -52,13 +52,6 @@
                 </ul>
             </div>
 
-            <label class="toggle-control">
-                <input type="checkbox" id="dark-mode-toggle">
-                <span class="control"></span>
-            </label>
-
-
-
         </div>
     </nav>
 
@@ -121,7 +114,7 @@
                 </div>
             </div>
     </section>
-    <section class="dark" id="portfolio">
+    <section class="dark">
         <div class="container py-4">
             <h1 class="h1 text-center" id="pageHeaderTitle">Portfolio</h1>
             <section class="myDesigns">
@@ -214,6 +207,8 @@
     <section id="portfolio" class="portfolio">
         <div class="container">
             <div class="section-title">
+                <br>
+                <br>
                 <h2>Portfolio</h2>
             </div>
 
@@ -231,8 +226,8 @@
             <div class="row portfolio-container">
 
                 <div class="col-lg-4 col-md-6 portfolio-item filter-props">
-                    <div class="portfolio-wrap">
-                        <img src="images/lightsaber_edit.png" class="img-fluid" alt="lightsaber">
+                    <div class="portfolio-wrap fsm"> <!-- add "fsm" class here -->
+                        <img src="images/lightsaber_edit.jpg" class="img-fluid" alt="lightsaber">
                         <div class="portfolio-info">
                             <h4>Lightsaber</h4>
                             <p>Prop builds</p>
@@ -240,8 +235,9 @@
                     </div>
                 </div>
 
+
                 <div class="col-lg-4 col-md-6 portfolio-item filter-product">
-                    <div class="portfolio-wrap">
+                    <div class="portfolio-wrap fsm">
                         <img src="images/CONTEXTRENDER.png" class="img-fluid" alt="flow">
                         <div class="portfolio-info">
                             <h4>Flow</h4>
@@ -251,8 +247,8 @@
                 </div>
 
                 <div class="col-lg-4 col-md-6 portfolio-item filter-graphic">
-                    <div class="portfolio-wrap">
-                        <img src="images/IMG_8456.png" class="img-fluid" alt="">
+                    <div class="portfolio-wrap fsm">
+                        <img src="images/IMG_8456.jpg" class="img-fluid" alt="">
                         <div class="portfolio-info">
                             <h4>Photography</h4>
                             <p>Graphic design</p>
@@ -260,7 +256,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 portfolio-item filter-product">
-                    <div class="portfolio-wrap">
+                    <div class="portfolio-wrap fsm">
                         <img src="images/LAMP CONTEXT.png" class="img-fluid" alt="">
                         <div class="portfolio-info">
                             <h4>CyberLight</h4>
@@ -269,7 +265,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 portfolio-item filter-product">
-                    <div class="portfolio-wrap">
+                    <div class="portfolio-wrap fsm">
                         <img src="images/IMG_8492.png" class="img-fluid" alt="">
                         <div class="portfolio-info">
                             <h4>Prototyping</h4>
@@ -278,7 +274,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 portfolio-item filter-graphic">
-                    <div class="portfolio-wrap">
+                    <div class="portfolio-wrap fsm">
                         <img src="images/DETAILRENDER.png" class="img-fluid" alt="">
                         <div class="portfolio-info">
                             <h4>Rendering</h4>
@@ -288,7 +284,7 @@
                 </div>
                 <!-- template voor nieuwe afbeeldingen etc
                 <div class="col-lg-4 col-md-6 portfolio-item filter-TYPE">
-                    <div class="portfolio-wrap">
+                    <div class="portfolio-wrap fsm">
                         <img src="img/portfolio.jpg" class="img-fluid" alt="">
                         <div class="portfolio-info">
                             <h4>Beschrijving</h4>
@@ -339,9 +335,19 @@
             <i class="fas fa-arrow-up"></i>
         </button>
     </div>
+    <div id="fsm_container" class="fsm-container">
+        <div class="fsm light">
+        </div>
+    </div>
+    <label class="toggle-control">
+        <input type="checkbox" id="dark-mode-toggle">
+        <span class="control"></span>
+    </label>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="scripts/swiper/swiper-bundle.min.js"></script>
     <script src="scripts/typedscript.js"></script>
+    <script src="scripts/fsm.js"></script>
+
 </body>
 
 </html>
