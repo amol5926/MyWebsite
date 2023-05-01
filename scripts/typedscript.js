@@ -48,31 +48,32 @@ function backToTop() {
     document.documentElement.scrollTop = 0;
 }
 
-//const darkModeToggle = document.getElementById('dark-mode-toggle');
-//const body = document.body;
-
-//darkModeToggle.addEventListener('click', function () {
-//    body.classList.toggle('dark-mode');
-//});
-
 
 
 //voor swiper bij portfolio
-new Swiper('.myDesign-slider', {
+var swiper = new Swiper('.myDesign-slider', {
     speed: 600,
     loop: true,
-    autoplay: {
-        delay: 8000,
-        disableOnInteraction: false
-    },
     slidesPerView: 'auto',
     pagination: {
         el: '.swiper-pagination',
         type: 'bullets',
         clickable: true
+    },
+    on: {
+        slideChange: function () {
+            $('.swiper-button').removeClass('active');
+            var activeSlideIndex = this.activeIndex;
+            $('.swiper-button').eq(activeSlideIndex).addClass('active');
+        }
     }
 });
 
+$('.swiper-button').click(function (e) {
+    e.preventDefault();
+    var slideId = $(this).attr('href');
+    swiper.slideTo($(slideId).index(), 600, false);
+});
 
 (function () {
     "use strict";
@@ -102,6 +103,8 @@ new Swiper('.myDesign-slider', {
             }
         }
     }
+
+
 
 
 
@@ -139,20 +142,7 @@ new Swiper('.myDesign-slider', {
 
 
 })()
-//popup nog verwijderen
-//window.addEventListener("load", function () {
-//  setTimeout(
-//    function open(event) {
-//      document.querySelector(".popup").style.display = "block";
-//    },
-//2000
-//  )
-//});
 
-
-//document.querySelector("#close").addEventListener("click", function () {
-//  document.querySelector(".popup").style.display = "none";
-//});
 
 
 
