@@ -19,7 +19,7 @@ function preload() {
   backgroundImgDay = loadImage('data/overdag.jpg');
   backgroundImgNight = loadImage('data/achtergrond.jpg');
 
-  fetch('http://api.weatherapi.com/v1/current.json?key=1b53d2f2be024670b42132629232505&q=Kortrijk&aqi=no')
+  fetch('https://api.weatherapi.com/v1/current.json?key=1b53d2f2be024670b42132629232505&q=Kortrijk&aqi=no')
     .then(response => response.json())
     .then(data => {
       const isDay = data.current.is_day === 1;
