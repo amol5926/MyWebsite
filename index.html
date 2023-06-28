@@ -5,27 +5,28 @@
     <title>Portfolio Alexander Mol</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!--zorgen dat de viewport breedte de schermbreedte is en schaal 1 dus geen zoom by default-->
 
-    <link href="images/favicon.png" rel="icon">
-    <link href="images/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="images/favicon.png" rel="icon"> <!--icoon voor bovenaan in browser-->
+    <link href="images/apple-touch-icon.png" rel="apple-touch-icon"> <!--icoon voor op apple toestellen-->
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="css/index.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">  <!--verwijzing naar extern bootstrap css document-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>  <!--verwijzing naar extern bootstrap js document-->
+    <link rel="stylesheet" href="css/index.css" rel="stylesheet"> <!--verwijzing naar mijn eigen css document-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">   <!--verwijzing naar font awesome voor de icons-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>    <!--verwijzing naar jquery nodig voor isotope-->
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>    <!--verwijzing naar isotope voor foto filters-->
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top"> <!--bootstrap classes navbar omdat het navbar is, navbar-expand-lg zorgt voor responsiveness zodat navbar op kleine toestellen hamburger menu wordt,navbar-dark voor dark theme,fixed top zorgt ervoor dat de navbar bovenaan blijft staan-->
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample08"
                 aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-            </button>
+            </button><!--hamburger menu voor mobiele toestellen-->
 
-            <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
+            <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08"> <!--collapse zorgt ervoor dat de navbar items verdwijnen als je op een hamburger menu klikt, is horizontaal gecentreerd-->
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="#">Home</a>
@@ -50,7 +51,7 @@
     </nav>
 
     <section id="hero">
-        <div class="hero route bg-image" style="background-image: url(images/IMG_8626V2.png)">
+        <div class="hero route bg-image" style="background-image: url(images/IMG_8626V2.png)">  <!--achtergrond afbeelding (route mag weg)-->
             <div class="hero-content display-table">
                 <div class="table-cell">
                     <div class="container">
@@ -64,15 +65,15 @@
 
     <section>
         <article id="about">
-            <div class="container py-4 py-xl-5">
-                <div class="row mb-5">
+            <div class="container py-4 py-xl-5">    <!--bootstrap voor padding bij gewone en brede schermen-->
+                <div class="row mb-5">    <!--rij met margin bottom-->
                     <div class="col">
                         <h1>About me</h1>
                     </div>
                 </div>
-                <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
-                    <div class="col-xl-8 col-xxl-7">
-                        <div class="d-flex">
+                <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3"> <!-- rij, gy voor gap, en de rest voor aantal kolommen afh van screen size-->
+                    <div class="col-xl-8 col-xxl-7"> <!--breedte val kolom voor bepaalde scherm grootte-->
+                        <div class="d-flex"> <!--was bedoeld voor afbeelding maar nooit toegevoegd-->
                             <div class="px-3"></div>
                         </div>
                         <p><br>I am Alexander Mol, a 19 year old
@@ -80,7 +81,7 @@
                             currently pursuing a Bachelor of science degree in Industrial Design
                             Engineering Technology. From an early age, I showed an interest in
                             science and mathematics, which led me to pursue my passion for
-                            technology. <br><br></p>
+                            technology. <br><br></p> <!-- beter tweede rij gedaan dan br br?-->
                         <p>I’m an avid problem solver who loves working
                             in projects that require creativity and ingenuity. My diverse
                             interests and passion for technology have led me to explore various
@@ -93,23 +94,23 @@
             </div>
         </article>
         <article id="education">
-            <div class="container py-4 py-xl-5">
+            <div class="container py-4 py-xl-5"> <!--bootstrap voor padding bij gewone en brede schermen-->
                 <div class="row mb-5">
                     <div class="col">
                         <br>
                         <h1>Education</h1>
                     </div>
                 </div>
-                <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
+                <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3"> <!--classes mogen eig weg-->
                     <div class="col-xl-8 col-xxl-7">
-                        <div class="d-flex">
+                        <div class="d-flex"> <!--hele div mag weg-->
                             <div class="px-3"></div>
                         </div>
                         <p><br><br><strong>Highschool
                                 education:</strong> Sciene
                             and Mathematics<br>
-                            <i class="fa fa-map-marker"></i> Campus het Spoor Mol<br>
-                            <i class="fa fa-calendar"></i> 2015-2021<br><br>
+                            <i class="fa fa-map-marker"></i> Campus het Spoor Mol<br> <!--i class voor icon-->
+                            <i class="fa fa-calendar"></i> 2015-2021<br><br><!-- beter tweede rij gedaan dan br br-->
                         </p>
                         <p><strong>University:</strong> Bachelor of
                             science degree in
@@ -122,14 +123,14 @@
             </div>
         </article>
         <article class="Skills">
-            <div class="container py-4 py-xl-5">
+            <div class="container py-4 py-xl-5"><!--bootstrap voor padding bij gewone en brede schermen-->
                 <div class="row mb-5">
                     <div class="col">
                         <br>
                         <h1>Skillset</h1>
                     </div>
                 </div>
-                <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
+                <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3"> <!--rij, tussenruimte, aantal kolommen afh scherm grootte-->
                     <div class="col-xl-3">
                         <div class="d-flex">
                             <div class="px-3"><img src="assets/img/clipboard-image-6.png" width="60" height="60">
@@ -216,9 +217,9 @@
             </div>
 
             <div class="row">
-                <div class="col-lg-12 d-flex justify-content-center">
+                <div class="col-lg-12 d-flex justify-content-center">  <!--gecentreerd,kolom in een rij, volledige breedte bij grote schermen-->
                     <ul id="portfolio-flters">
-                        <li data-filter="*" class="filter-active">All</li>
+                        <li data-filter="*" class="filter-active">All</li> <!--filters voor isotope-->
                         <li data-filter=".filter-product">Product design</li>
                         <li data-filter=".filter-graphic">Graphic design</li>
                         <li data-filter=".filter-props">Prop builds</li>
@@ -229,7 +230,7 @@
             <div class="row portfolio-container">
 
                 <div class="col-lg-4 col-md-6 portfolio-item filter-props">
-                    <div class="portfolio-wrap fsm">
+                    <div class="portfolio-wrap fsm"> <!--fsm voor fullscreen mode-->
                         <img src="images/lightsaber_edit.jpg" class="img-fluid" alt="lightsaber">
                         <div class="portfolio-info">
                             <h4>Lightsaber</h4>
@@ -300,12 +301,12 @@
     </section>
 
 
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-            class="bi bi-arrow-up-short"></i></a>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i 
+            class="bi bi-arrow-up-short"></i></a> <!--mag helemaal weg-->
 
     <div class="container">
-        <footer class="py-3 my-4">
-            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <footer class="py-3 my-4"> <!--padding en margin toevoegen-->
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3"> <!--padding en margin bottom, rand onderaan, centreren-->
                 <li class="nav-item"><a href="#hero" class="nav-link px-2 text-muted">Home</a></li>
                 <li class="nav-item"><a href="#about" class="nav-link px-2 text-muted">About</a></li>
                 <li class="nav-item"><a href="#education" class="nav-link px-2 text-muted">Resume</a></li>
@@ -313,25 +314,26 @@
                 <li class="nav-item"><a href="UFOBattleFinal/robot.html" class="nav-link px-2 text-muted">Game</a>
                 </li>
             </ul>
-            <p class="text-center text-muted">&copy; 2023 Alexander Mol<br><a href="mailto:alexander.mol@ugent.be"
+            <p class="text-center text-muted">&copy; 2023 Alexander Mol<br><a href="mailto:alexander.mol@ugent.be" 
                     id="email" class="text-center text-muted">Contact:
-                    alexander.mol@ugent.be</a></p>
+                    alexander.mol@ugent.be</a></p> <!--mailto voor email-->
         </footer>
         <button type="button" class="btn btn-floating btn-lg" id="btn-back-to-top">
-            <i class="fas fa-arrow-up"></i>
+            <i class="fas fa-arrow-up"></i>    <!--pijl omhoog-->
         </button>
     </div>
-    <div id="fsm_container" class="fsm-container">
+    <div id="fsm_container" class="fsm-container"> <!--fullscreen mode container mag weg-->
         <div class="fsm light">
         </div>
     </div>
     <label class="toggle-control">
-        <input type="checkbox" id="dark-mode-toggle">
+        <input type="checkbox" id="dark-mode-toggle"> <!--dark mode toggle-->
         <span class="control"></span>
     </label>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script src="scripts/index.js"></script>
-    <script src="scripts/fsm.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>     <!--verwijzing typed script voor effect bovenaan-->
+    <script src="scripts/index.js"></script>    <!--verwijzing naar mijn eigen js document-->
+    <script src="scripts/fsm.js"></script>    <!--script voor fullscreen mode, niet zelf geschreven-->
+
 
 </body>
 
